@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="usf-8"></head>
+<body>
 
+· 삼각형 : 밑변과 높이를 입력으로 받아서 면적을 출력한다. width*height/2
+
+<form method="GET" action="homework3-4.php">
+width : <input type="text" name="width"><br>
+height : <input type="text" name="height">
+<input type="submit" value="ok">
+</form>
+
+· 사각형 : 가로와 세로를 입력으로 받아서 면적을 출력한다. width*height
+
+
+
+
+
+· 원 : 반지름을 입력으로 받아서 면적을 출력한다. pi*radius^2
+· 직육면체 : 가로, 세로, 높이를 입력으로 받아서 체적을 출력한다. width*length*height
+· 원통 : 반지름과 높이를 입력으로 받아서 체적을 출력한다. pi*radius^2*height
+· 구 : 반지름을 입력으로 받아서 체적을 출력한다. 4/3*pi*radius^3
+</body>
+
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="usf-8"></head>
+<body>
+<?php
+echo("<P> width <b>". $_GET["width"]. "</b> 이고.");
+echo("<P> height <b>". $_GET["height"]. "</b> 입니다.");
+$area = $_GET["width"]*$_GET["height"]/2;
+echo("<p> 삼각형 면적은 <b> $area </b> 입니다.");
+?>
+</body>
+</html>
