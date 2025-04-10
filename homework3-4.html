@@ -75,13 +75,14 @@ echo("<p> 직육면체 체적은 <b> $area </b> 입니다.");
 
 echo("<P> pi <b>". $_GET["pi"]. "</b> 이고.");
 echo("<P> radius <b>". $_GET["radius"]. "</b> 입니다.");
-$area = $_GET["pi"]*$_GET["radius"]^2;
-echo("<p> 원 면적은 <b> $area </b> 입니다.");
+echo("<P> height <b>". $_GET["height"]. "</b> 입니다.");
+$area = $_GET["pi"]*$_GET["radius"]^2*$_GET["height"];
+echo("<p> 원통 체적은 <b> $area </b> 입니다.");
 
 echo("<P> pi <b>". $_GET["pi"]. "</b> 이고.");
 echo("<P> radius <b>". $_GET["radius"]. "</b> 입니다.");
-$area = $_GET["pi"]*$_GET["radius"]^2;
-echo("<p> 원 면적은 <b> $area </b> 입니다.");
+$area = 4/3*$_GET["pi"]*$_GET["radius"]^3;
+echo("<p> 구 체적은 <b> $area </b> 입니다.");
 ?>
 </body>
 </html>
