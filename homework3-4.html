@@ -12,16 +12,39 @@ height : <input type="text" name="height">
 </form>
 
 · 사각형 : 가로와 세로를 입력으로 받아서 면적을 출력한다. width*height
-
-
-
-
+<form method="GET" action="homework3-4.php">
+width : <input type="text" name="width"><br>
+height : <input type="text" name="height">
+<input type="submit" value="ok">
+</form>
 
 · 원 : 반지름을 입력으로 받아서 면적을 출력한다. pi*radius^2<br>
+<form method="GET" action="homework3-4.php">
+pi : <input type="text" name="pi"><br>
+radius : <input type="text" name="radius">
+<input type="submit" value="ok">
+</form>
 · 직육면체 : 가로, 세로, 높이를 입력으로 받아서 체적을 출력한다. width*length*height<br>
+<form method="GET" action="homework3-4.php">
+width : <input type="text" name="width"><br>
+length : <input type="text" name="length"><br>
+height : <input type="text" name="height">
+<input type="submit" value="ok">
+</form>
 · 원통 : 반지름과 높이를 입력으로 받아서 체적을 출력한다. pi*radius^2*height<br>
+<form method="GET" action="homework3-4.php">
+width : <input type="text" name="width"><br>
+height : <input type="text" name="height">
+<input type="submit" value="ok">
+</form>
 · 구 : 반지름을 입력으로 받아서 체적을 출력한다. 4/3*pi*radius^3<br>
+<form method="GET" action="homework3-4.php">
+width : <input type="text" name="width"><br>
+height : <input type="text" name="height">
+<input type="submit" value="ok">
+</form>
 </body>
+
 
 
 <!DOCTYPE html>
@@ -33,6 +56,32 @@ echo("<P> width <b>". $_GET["width"]. "</b> 이고.");
 echo("<P> height <b>". $_GET["height"]. "</b> 입니다.");
 $area = $_GET["width"]*$_GET["height"]/2;
 echo("<p> 삼각형 면적은 <b> $area </b> 입니다.");
+
+echo("<P> width <b>". $_GET["width"]. "</b> 이고.");
+echo("<P> height <b>". $_GET["height"]. "</b> 입니다.");
+$area = $_GET["width"]*$_GET["height"];
+echo("<p> 사각형 면적은 <b> $area </b> 입니다.");
+
+echo("<P> pi <b>". $_GET["pi"]. "</b> 이고.");
+echo("<P> radius <b>". $_GET["radius"]. "</b> 입니다.");
+$area = $_GET["pi"]*$_GET["radius"]^2;
+echo("<p> 원 면적은 <b> $area </b> 입니다.");
+
+echo("<P> width <b>". $_GET["width"]. "</b> 이고.");
+echo("<P> width <b>". $_GET["length"]. "</b> 이고.");
+echo("<P> height <b>". $_GET["height"]. "</b> 입니다.");
+$area = $_GET["width"]*$_GET["length"]*$_GET["height"];
+echo("<p> 직육면체 체적은 <b> $area </b> 입니다.");
+
+echo("<P> pi <b>". $_GET["pi"]. "</b> 이고.");
+echo("<P> radius <b>". $_GET["radius"]. "</b> 입니다.");
+$area = $_GET["pi"]*$_GET["radius"]^2;
+echo("<p> 원 면적은 <b> $area </b> 입니다.");
+
+echo("<P> pi <b>". $_GET["pi"]. "</b> 이고.");
+echo("<P> radius <b>". $_GET["radius"]. "</b> 입니다.");
+$area = $_GET["pi"]*$_GET["radius"]^2;
+echo("<p> 원 면적은 <b> $area </b> 입니다.");
 ?>
 </body>
 </html>
