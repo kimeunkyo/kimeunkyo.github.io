@@ -1,1 +1,21 @@
+CREATE DATABASE themepark;
+USE themepark;
 
+CREATE TABLE tickets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    category VARCHAR(20),  -- 예: 입장권, BIG3, 자유이용권, 연간이용권
+    type VARCHAR(10),      -- 어린이 or 어른
+    price INT,
+    note VARCHAR(50)       -- 비고: 입장, 입장+놀이3종 등
+);
+
+-- 데이터 삽입
+INSERT INTO tickets (category, type, price, note) VALUES
+('입장권', '어린이', 7000, '입장'),
+('입장권', '어른', 10000, '입장'),
+('BIG3', '어린이', 12000, '입장+놀이3종'),
+('BIG3', '어른', 16000, '입장+놀이3종'),
+('자유이용권', '어린이', 21000, '입장+놀이자유'),
+('자유이용권', '어른', 28000, '입장+놀이자유'),
+('연간이용권', '어린이', 70000, '입장+놀이자유'),
+('연간이용권', '어른', 90000, '입장+놀이자유');
